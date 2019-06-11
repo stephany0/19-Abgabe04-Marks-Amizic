@@ -11,12 +11,13 @@ import java.util.NoSuchElementException;
 public class StringQueue implements Queue {
 	
 	private List<String> elements = new ArrayList<String>();
-	private int maxSize = 5;
+	private int maxSize;
 
-	public StringQueue(int maxsize){
-		maxSize = maxSize;
+	public StringQueue(int maxSize){
+		this.maxSize = maxSize;
 	}
-	
+
+
 	@Override
 	public boolean offer(String obj) {
 		if(elements.size() < maxSize)
@@ -27,10 +28,10 @@ public class StringQueue implements Queue {
 		return true;
 	}
 
+
 	@Override
 	public String poll() {
-		String element = peek();
-
+		String element;
 		if(elements.size() > 0){
 			element = elements.get(0);
 			elements.remove(0);
@@ -40,6 +41,7 @@ public class StringQueue implements Queue {
 		
 		return element;
 	}
+
 
 	@Override
 	public String remove() {
@@ -51,6 +53,7 @@ public class StringQueue implements Queue {
 		return element;
 	}
 
+
 	@Override
 	public String peek() {
 		String element;
@@ -61,6 +64,7 @@ public class StringQueue implements Queue {
 		
 		return element;
 	}
+
 
 	@Override
 	public String element() {
