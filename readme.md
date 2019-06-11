@@ -7,13 +7,13 @@
     - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
 - [ ] Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
     - [x] Es befinden sich gesamt 3 Fehler im Source Code.
-    - [ ] Bei Bedarf Optimieren Sie das Queue Beispiel.
+    - [x] Bei Bedarf Optimieren Sie das Queue Beispiel.
     - [ ] Ergänzen Sie das Beispiel nach eigenen Ermessen um es testen zu können.
 - [ ] Erstellen Sie für Klasse und alle Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
     - [ ] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report. Konfigurationsmanagement Vertiefende Gesamtwiederholung Arbeitsaufträge.docx Seite 4 von 6 Institut Internettechnologien und -Anwendungen
 - [ ] Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
     - [ ] Sie werden die „selben“ Testfälle mehrfach erstellen müssen um „mehrere Variationen“ für einen möglichst vollständigen Test zu erreichen. Achten Sie dabei mit unterschiedlichen Daten zu testen.
-    - [ ] JavaDoc Kommentare erstellen.
+    - [x] JavaDoc Kommentare erstellen.
     - [ ] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
 - [ ] Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
     - [ ] EntwicklerInnen Informationen hinzufügen.

@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 // write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
 public class StringQueue implements Queue {
-	
+
 	private List<String> elements = new ArrayList<String>();
 	private int maxSize;
 
@@ -17,18 +17,23 @@ public class StringQueue implements Queue {
 		this.maxSize = maxSize;
 	}
 
-
+	/**
+	 * @param obj Adds the element to the queue.
+	 * @return If the addition is successful, the method returns true else false.
+	 */
 	@Override
 	public boolean offer(String obj) {
 		if(elements.size() < maxSize)
 			elements.add(obj);
 		else
 			return false;
-		
+
 		return true;
 	}
 
-
+	/**
+	 * @return Returns the head (first) element and also deletes it, if the queue is empty it returns null
+	 */
 	@Override
 	public String poll() {
 		String element;
@@ -38,22 +43,26 @@ public class StringQueue implements Queue {
 		} else
 			element = null;
 
-		
+
 		return element;
 	}
 
-
+	/**
+	 * @return extension to poll(), throws NoSuchElementException if the queue is empty
+	 */
 	@Override
 	public String remove() {
-		String element = poll();		
+		String element = poll();
 
 		if(element == null)
 			throw new NoSuchElementException("there's no element any more");
-		
+
 		return element;
 	}
 
-
+	/**
+	 * @return Returns the head element or null if the queue is empty.
+	 */
 	@Override
 	public String peek() {
 		String element;
@@ -61,11 +70,13 @@ public class StringQueue implements Queue {
 			element = elements.get(0);
 		else
 			element = null;
-		
+
 		return element;
 	}
 
-
+	/**
+	 * @return extension to peek(), throws NoSuchElementException when the queue is empty.
+	 */
 	@Override
 	public String element() {
 		String element = peek();
