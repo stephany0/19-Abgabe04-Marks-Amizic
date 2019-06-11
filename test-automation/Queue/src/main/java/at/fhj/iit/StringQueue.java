@@ -56,7 +56,6 @@ public class StringQueue implements Queue {
 
 		if(element == null)
 			throw new NoSuchElementException("there's no element any more");
-
 		return element;
 	}
 
