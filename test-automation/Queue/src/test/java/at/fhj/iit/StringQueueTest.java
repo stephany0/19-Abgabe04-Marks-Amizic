@@ -42,7 +42,7 @@ public class StringQueueTest {
     }
     /**
      * test returns true if element is null
-     * if we add an element this test will fail
+     *
      * @throws Exception
      */
     @Test
@@ -50,8 +50,19 @@ public class StringQueueTest {
        String element = q.poll();
        assertNull(element);
     }
+
     /**
-     *
+     * test if the head element is returned
+     * @throws Exception
+     */
+    @Test
+    public void testPollIfDeleted() throws Exception{
+        q.offer("hallo");
+        String element = q.poll();
+        assertTrue(element.contentEquals("hallo"));
+    }
+    /**
+     *  test if remove method will throw NoSuchElementException
      * @throws Exception
      */
     @Test(expected = NoSuchElementException.class)
@@ -101,5 +112,6 @@ public class StringQueueTest {
     }
     @After
     public void tearDown() throws Exception {
+
     }
 }

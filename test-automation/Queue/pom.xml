@@ -23,7 +23,35 @@
 		  <properties>
 			<picUrl>https://avatars2.githubusercontent.com/u/15637184</picUrl>
 		  </properties>
-		</developer>     
+		</developer> 
+		<developer>
+		  <id>stephanya</id>
+		  <name>Stephany Amizic</name>
+		  <email>stephany.amizic@edu.campus02.at</email>
+		  <organization>Campus 02</organization>
+		  <organizationUrl>https://www.campus02.at/</organizationUrl>
+		  <roles>
+			<role>Student</role>
+		  </roles>
+		  <timezone>Europe/Vienna</timezone>
+		  <properties>
+			<picUrl>https://avatars0.githubusercontent.com/u/48792902?s=400&u=769fd571c816c7440d31b4cfaa8b6a6acfd547d0&v=4</picUrl>
+		  </properties>
+		</developer>
+		<developer>
+		  <id>danielm</id>
+		  <name>Daniel Marks</name>
+		  <email>daniel.marks@edu.campus02.at</email>
+		  <organization>Campus 02</organization>
+		  <organizationUrl>https://www.campus02.at/</organizationUrl>
+		  <roles>
+			<role>Student</role>
+		  </roles>
+		  <timezone>Europe/Vienna</timezone>
+		  <properties>
+			<picUrl>https://avatars0.githubusercontent.com/u/48792850?s=400&v=4</picUrl>
+		  </properties>
+		</developer>
 	</developers>
 	
     <build>
