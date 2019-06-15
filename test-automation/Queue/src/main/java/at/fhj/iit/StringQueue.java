@@ -3,6 +3,8 @@ package at.fhj.iit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 // there's some Bugs included, try to debug the code and fix the Bugs
 // there are different Bugs, wrong implementation, typos, ...
@@ -10,10 +12,12 @@ import java.util.NoSuchElementException;
 
 public class StringQueue implements Queue {
 
+	private static final Logger logger = LogManager.getLogger(StringQueue.class);
 	private List<String> elements = new ArrayList<String>();
 	private int maxSize;
 
 	public StringQueue(int maxSize){
+		logger.info("constructor with maxSize " + maxSize);
 		this.maxSize = maxSize;
 	}
 
@@ -23,11 +27,13 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public boolean offer(String obj) {
-		if(elements.size() < maxSize)
+		logger.info("offer");
+		if(elements.size() < maxSize) {
 			elements.add(obj);
-		else
+		}
+		else {
 			return false;
-
+		}
 		return true;
 	}
 
@@ -37,13 +43,13 @@ public class StringQueue implements Queue {
 	@Override
 	public String poll() {
 		String element;
+		logger.info("poll");
 		if(elements.size() > 0){
 			element = elements.get(0);
 			elements.remove(0);
-		} else
+		} else {
 			element = null;
-
-
+		}
 		return element;
 	}
 
@@ -52,10 +58,12 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public String remove() {
+		logger.info("remove");
 		String element = poll();
-
-		if(element == null)
+		if(element == null) {
+			logger.info("throw NoSuchElementException");
 			throw new NoSuchElementException("there's no element any more");
+		}
 		return element;
 	}
 
@@ -65,6 +73,7 @@ public class StringQueue implements Queue {
 	@Override
 	public String peek() {
 		String element;
+		logger.info("peek");
 		if(elements.size() > 0)
 			element = elements.get(0);
 		else
@@ -78,10 +87,12 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public String element() {
+		logger.info("element");
 		String element = peek();
-		if(element == null)
-			throw new NoSuchElementException("there's no element any more");
-
+		if(element == null){
+            logger.info("throw NoSuchElementException");
+            throw new NoSuchElementException("there's no element any more");
+        }
 		return element;
 	}
 

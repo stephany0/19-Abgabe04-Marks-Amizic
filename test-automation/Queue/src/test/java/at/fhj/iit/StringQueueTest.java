@@ -8,110 +8,123 @@ import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
 
+/**
+ * Test class of the StringQueue class
+ * tests all methods
+ */
 public class StringQueueTest {
-    public StringQueue q;
+    private StringQueue q;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp(){
         q = new StringQueue(5);
     }
 
     /**
      * check if objects are added to the list
-     * @throws Exception
      */
     @Test
-    public void testAdd() throws Exception{
+    public void testOffer(){
         boolean var = q.offer("hallo");
         assertTrue(var);
     }
 
     /**
-     * When the maxSize is reached this test will return false.
-     * In this case if maxSize is 5 any number above it will return false.
-     * @throws Exception
+     * this test tries to add 6 elements although the maxsize
+     * of the queue is 5. The last addition should fail and
+     * after the loop the test checks if var is false
      */
     @Test
-    public void testOffer() throws Exception{
+    public void testMaxSize(){
         boolean var = true;
-        for(int i=0; i<=4; i++) {
+        for(int i=0; i<=5; i++) {
             var = q.offer("hallo");
 
         }
-        assertTrue(var);
+        assertFalse(var);
     }
     /**
-     * test returns true if element is null
-     *
-     * @throws Exception
+     * tries to remove head (first) element of an empty queue
+     * and checks if null gets returned
      */
     @Test
-    public void testPollIfEmpty() throws Exception{
+    public void testPollIfEmpty(){
        String element = q.poll();
        assertNull(element);
     }
 
     /**
-     * test if the head element is returned
-     * @throws Exception
+     * adds an element to the queue, removes it and checks if it
+     * is the same element
      */
     @Test
-    public void testPollIfDeleted() throws Exception{
+    public void testOfferPoll(){
         q.offer("hallo");
         String element = q.poll();
         assertTrue(element.contentEquals("hallo"));
     }
     /**
-     *  test if remove method will throw NoSuchElementException
-     * @throws Exception
+     *  test if remove method will throw NoSuchElementException if
+     *  queue is empty
      */
     @Test(expected = NoSuchElementException.class)
-    public void testRemoveIfEmpty() throws Exception{
+    public void testRemoveIfEmpty(){
         q.remove();
     }
 
     /**
-     * test if Remove method is retuning the right element if not empty
-     * @throws Exception
+     * test if Remove method is returning the right element if not empty
      */
     @Test
-    public void testRemoveIfNotEmpty() throws Exception{
-        q.offer("hallo");
+    public void testOfferRemove(){
+        q.offer("1");
         String element = q.remove();
-        assertTrue(element.contentEquals("hallo"));
+        assertTrue(element.contentEquals("1"));
     }
 
     /**
-     * test if Peek method is empty and returns null
-     * @throws Exception
+     * use peek method on an empty queue and check if null
+     * gets returned
      */
     @Test
-    public void testPeekIfEmpty() throws Exception{
+    public void testPeekIfEmpty(){
         String element = q.peek();
         assertNull(element);
     }
 
     /**
      * test if peek returns the right value if it is not empty
-     * @throws Exception
      */
     @Test
-    public void testPeekIfNotEmpty() throws Exception{
+    public void testOfferPeek(){
         q.offer("hallo");
+        q.offer("2");
         String element = q.peek();
         assertTrue(element.contentEquals("hallo"));
     }
 
     /**
-     * test if element method throws exception
-     * @throws Exception
+     * tests if the method element returns the right value
+     */
+    @Test
+    public void testOfferElement(){
+        q.offer("element");
+        q.offer("2");
+        String element = q.element();
+        assertTrue(element.contentEquals("element"));
+    }
+
+    /**
+     * test if exception gets thrown if you use the
+     * method element on an empty queue
      */
     @Test(expected = NoSuchElementException.class)
-    public void testElementIfEmpty() throws Exception{
+    public void testElementIfEmpty(){
         q.element();
     }
-    @After
-    public void tearDown() throws Exception {
 
+    @After
+    public void tearDown() {
+        q = null;
     }
 }

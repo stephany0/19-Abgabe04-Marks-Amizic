@@ -35,7 +35,7 @@
 		  </roles>
 		  <timezone>Europe/Vienna</timezone>
 		  <properties>
-			<picUrl>https://avatars0.githubusercontent.com/u/48792902?s=400&u=769fd571c816c7440d31b4cfaa8b6a6acfd547d0&v=4</picUrl>
+			
 		  </properties>
 		</developer>
 		<developer>
@@ -49,7 +49,7 @@
 		  </roles>
 		  <timezone>Europe/Vienna</timezone>
 		  <properties>
-			<picUrl>https://avatars0.githubusercontent.com/u/48792850?s=400&v=4</picUrl>
+			
 		  </properties>
 		</developer>
 	</developers>
@@ -74,10 +74,26 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>2.8.2</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.2</version>
+        </dependency>
     </dependencies>
+    <reporting>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.1.0</version>
+          <configuration>
+          </configuration>
+        </plugin>
+      </plugins>
+    </reporting>
 </project>
