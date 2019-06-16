@@ -33,7 +33,7 @@
 - [x] Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
     - [x] Übertragung Information aus Labreport Template.
     - [x] Alle Schritte dieser Übung nachvollziehbar erläutern.
-    - [ ] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
+    - [x] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
     - [x] Korrekturlesen Dokumentation
     - [x] PDF erstellen (zB Dillinger)
 - [x] Überprüfung Vollständigkeit der Abgabe
