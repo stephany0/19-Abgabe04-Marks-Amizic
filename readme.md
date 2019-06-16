@@ -2,9 +2,9 @@
 
 - [x] Übertragen Angabe Taskliste in Markdown Readme
 - [x]  Einspielen Queue Vorlage aus Repository: https://github.com/michaelulm/softwareconfiguration-management/tree/master/test-automation/Queue
-- [ ] Taskergebnisse Schritt für Schritt auf Git stellen
-    - [ ] Führrung Taskliste
-    - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
+- [x] Taskergebnisse Schritt für Schritt auf Git stellen
+    - [x] Führrung Taskliste
+    - [x] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
 - [x] Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
     - [x] Es befinden sich gesamt 3 Fehler im Source Code.
     - [x] Bei Bedarf Optimieren Sie das Queue Beispiel.
@@ -25,7 +25,7 @@
     - [x] Geben Sie eine Error Lognachricht aus bevor Sie einen Fehler werfen.
     - [ ] Ergebnisse (Konsolenausgabe) als Bild in Dokumentation einfließen lassen.
 - [ ] Maven Site Dokumentation erstellen
-    - [ ] Inklusive Javadoc Code und Javadoc Test Klassen
+    - [x] Inklusive Javadoc Code und Javadoc Test Klassen
     - [ ] Inklusive Menü mit Verweis auf manuell erstellte Seite
         - [ ] Seite erläutert Funktionsweise Queue
     - [ ] Geben Sie ein Bild der Maven Site Dokumentation in den Lab Report
